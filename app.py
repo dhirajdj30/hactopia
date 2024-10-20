@@ -1,4 +1,5 @@
 import pickle
+import os
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify
@@ -186,4 +187,4 @@ def summarize():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port)
+    app.run(host='0.0.0.0', port=port)
