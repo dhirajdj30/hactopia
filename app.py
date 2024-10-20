@@ -6,7 +6,7 @@ from summary import process_upload
 import google.generativeai as genai
 API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(API_KEY)
-port = process.env.PORT || 4000;
+port = os.getenv("PORT", 4000)
 # Load the model
 # Initialize the Flask application
 app = Flask(__name__)
