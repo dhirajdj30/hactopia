@@ -1,0 +1,11 @@
+flask
+scikit-learn
+pandas
+google-generativeai
+pdf2image
+torch
+PyMuPDF
+pytesseract
+Pillow
+spacy
+transformers
