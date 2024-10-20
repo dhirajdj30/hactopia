@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-app
+    env: python
+    region: oregon
+    buildCommand: |
+      apt-get update && apt-get install -y tesseract-ocr
+      pip install -r requirements.txt
+    startCommand: python app.py
