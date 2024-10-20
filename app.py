@@ -6,6 +6,7 @@ from summary import process_upload
 import google.generativeai as genai
 API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(API_KEY)
+port = process.env.PORT || 4000;
 # Load the model
 # Initialize the Flask application
 app = Flask(__name__)
@@ -185,4 +186,4 @@ def summarize():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port)
